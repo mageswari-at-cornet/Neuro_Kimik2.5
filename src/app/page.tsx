@@ -248,16 +248,7 @@ export default function Dashboard() {
   );
 }
 
-interface OutcomeCardProps {
-  icon: React.ReactNode;
-  label: string;
-  value: number;
-  unit: string;
-  delta: number;
-  deltaUnit: string;
-  invertDelta?: boolean;
-  highlight?: boolean;
-}
+
 
 interface OutcomeTableRowProps {
   icon: React.ReactNode;

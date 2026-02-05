@@ -2,7 +2,7 @@
 
 import { useDashboardStore } from "@/store/dashboardStore";
 import { cn } from "@/lib/utils";
-import { Brain, Clock, Settings, HelpCircle, RotateCcw, User, Activity, Sun, Moon } from "lucide-react";
+import { Brain, Clock, User, Activity, Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface HeaderProps {
@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 export function Header({ className }: HeaderProps) {
-  const { patientData, resetToBaseline } = useDashboardStore();
+  const { patientData } = useDashboardStore();
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {

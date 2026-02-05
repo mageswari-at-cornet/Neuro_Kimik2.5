@@ -3,8 +3,7 @@ import { create } from "zustand";
 // Outcome calculation function based on simulation parameters
 function calculateOutcomes(
   params: SimulationParams,
-  patientData: PatientData,
-  baselineOutcomes: OutcomeMetrics
+  patientData: PatientData
 ): OutcomeMetrics {
   // Base values
   let timeToReperfusion = 180;
@@ -232,7 +231,7 @@ export const useDashboardStore = create<DashboardState>((set) => ({
   setActiveScenario: (scenario) =>
     set((state) => {
       // Recalculate outcomes when scenario changes
-      const newOutcomes = calculateOutcomes(state.simulationParams, state.patientData, state.baselineOutcomes);
+      const newOutcomes = calculateOutcomes(state.simulationParams, state.patientData);
       return {
         activeScenario: scenario,
         currentOutcomes: newOutcomes,
@@ -248,7 +247,7 @@ export const useDashboardStore = create<DashboardState>((set) => ({
     set((state) => {
       const newParams = { ...state.simulationParams, ...params };
       // Recalculate outcomes whenever parameters change
-      const newOutcomes = calculateOutcomes(newParams, state.patientData, state.baselineOutcomes);
+      const newOutcomes = calculateOutcomes(newParams, state.patientData);
       return {
         simulationParams: newParams,
         currentOutcomes: newOutcomes,

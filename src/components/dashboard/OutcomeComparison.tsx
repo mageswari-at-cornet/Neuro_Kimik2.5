@@ -1,7 +1,7 @@
 "use client";
 
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, Cell, Area, AreaChart, Line } from "recharts";
-import { cn, formatDelta } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import type { UncertaintyOutcome } from "@/store/dashboardStore";
 
 interface OutcomeData {

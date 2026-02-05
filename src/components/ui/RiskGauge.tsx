@@ -1,6 +1,6 @@
 "use client";
 
-import { cn, getSeverityColor } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface RiskGaugeProps {
   label: string;

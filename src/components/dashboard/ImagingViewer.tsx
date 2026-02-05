@@ -53,7 +53,7 @@ export function ImagingViewer({ className }: ImagingViewerProps) {
           <img
             src="/images/cta.png"
             alt="CT Angiography"
-            className="max-w-[85%] max-h-[85%] object-contain"
+            className="max-w-[85%] max-h-[75%] object-contain"
           />
         ) : (
           /* Placeholder content for other modalities */
